@@ -45,7 +45,7 @@ Menjalankan Script
 
 Setelah API key sudah ditambahkan dan `wallet.txt` telah dibuat, kamu bisa menjalankan script dengan perintah berikut:
 
-    python cek_fomo.py
+    python app.py
 
 Hasil akan ditampilkan di terminal, dengan detail jumlah token FOMO untuk setiap wallet yang ada di `wallet.txt`.
 
