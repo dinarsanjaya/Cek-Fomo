@@ -7,7 +7,7 @@ import time
 # Inisialisasi colorama
 colorama.init(autoreset=True)
 
-# Masukkan API key https://blockvision.org/ di sini
+# Masukkan API key di sini
 API_KEY = ""
 
 # Token yang dicari
@@ -46,22 +46,29 @@ def check_wallet(wallet_address):
                 
                 # Tampilkan jumlah FOMO yang ditemukan
                 print(f"{Fore.GREEN}Wallet {wallet_address} berisi {formatted_fomo} FOMO.")
+                return total_fomo  # Kembalikan total FOMO dari wallet ini
             else:
                 print(f"{Fore.RED}Wallet {wallet_address} tidak berisi token FOMO.")
+                return 0  # Jika tidak ada token, kembalikan 0
             break
         elif response.status_code == 429:
             print(f"{Fore.YELLOW}Rate limit tercapai. Menunggu 5 detik sebelum mencoba lagi...")
             time.sleep(5)  # Tunggu 5 detik sebelum mencoba lagi
         else:
             print(f"{Fore.YELLOW}Gagal mengakses wallet {wallet_address}. Status code: {response.status_code}")
-            break
+            return 0  # Jika gagal, kembalikan 0
 
 # Baca daftar wallet dari file wallet.txt
+total_fomo_all_wallets = 0  # Inisialisasi total FOMO untuk semua wallet
 with open("wallet.txt", "r") as file:
     wallets = file.readlines()
 
 # Cek tiap wallet di file
 for wallet in wallets:
     wallet = wallet.strip()  # Menghapus spasi atau newline
-    check_wallet(wallet)
+    total_fomo_all_wallets += check_wallet(wallet)  # Tambahkan total FOMO dari wallet ini
     time.sleep(1)  # Tambahkan delay 1 detik antara setiap request
+
+# Format dan tampilkan total FOMO dari semua wallet
+formatted_total_fomo = f"{total_fomo_all_wallets:,}".replace(",", ".")
+print(f"{Fore.BLUE}Total FOMO dari semua wallet: {formatted_total_fomo} FOMO.")
