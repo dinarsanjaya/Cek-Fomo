@@ -15,7 +15,7 @@ Instalasi
 
 1.  Clone repositori ini:
     
-        git clone https://github.com/username/Cek-Fomo.git
+        git clone https://github.com/dinarsanjaya/Cek-Fomo
     
 2.  Masuk ke direktori proyek:
     
@@ -27,8 +27,8 @@ Instalasi
     
 4.  Buat file `wallet.txt` yang berisi daftar alamat wallet Sui yang ingin diperiksa, satu alamat per baris. Contoh:
     
-        0xf11f64f84fa9df7d509124327957a5bf21fca45d051f2d858b1c3d4d42262efb
-        0x1ae9d2965a02b4b1253b1e62f8234f524875802b122ed55160297f2a8ab7ddce
+        0xf11f64f84fa9df7d50912432795xxxxxxxxxxxxxxxxxxx
+        0x1ae9d2965a02b4b1253b1e62f82xxxxxxxxxxxxxxxxxxx
     
 
 Konfigurasi API
@@ -52,8 +52,8 @@ Hasil akan ditampilkan di terminal, dengan detail jumlah token FOMO untuk setiap
 Contoh Output
 -------------
 
-    Wallet 0xf11f64f84fa9df7d509124327957a5bf21fca45d051f2d858b1c3d4d42262efb berisi 937.565.673.680 FOMO.
-    Wallet 0x1ae9d2965a02b4b1253b1e62f8234f524875802b122ed55160297f2a8ab7ddce tidak berisi token FOMO.
+    Wallet 0xf11f64f84fa9df7d50912432795xxxxxxxxxxxxxxxxxxx berisi 937.565.673.680 FOMO.
+    Wallet 0x1ae9d2965a02b4b1253b1e62f82xxxxxxxxxxxxxxxxxxx tidak berisi token FOMO.
 
 Penanganan Rate Limit
 ---------------------
