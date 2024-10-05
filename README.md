@@ -1,6 +1,4 @@
-  Cek-Fomo body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 20px; background-color: #f4f4f4; } h1, h2, h3 { color: #333; } pre { background: #eaeaea; padding: 10px; border-radius: 5px; overflow: auto; } code { background: #eaeaea; padding: 2px 4px; border-radius: 4px; }
-
-Cek-Fomo
+# Cek-Fomo
 ========
 
 **Cek-Fomo** adalah script Python untuk memeriksa saldo token FOMO dalam wallet Sui Network dengan memanfaatkan BlockVision RPC API. Script ini akan membaca daftar wallet dari file `wallet.txt` dan menampilkan jumlah token FOMO yang dimiliki oleh setiap wallet, serta menangani rate limit API secara otomatis.
